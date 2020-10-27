@@ -11,8 +11,6 @@ class GradientView: UIView {
     
     public var gradientLayer: CAGradientLayer!
     
-    
-    
     open override class var layerClass: AnyClass {
         return CAGradientLayer.classForCoder()
     }
