@@ -11,7 +11,7 @@ import UIKit
 import MBProgressHUD
 #endif
 
-extension UIViewController {
+public extension UIViewController {
     
     /// A bar button item to dismiss this view controller.
     var wv_dismissButtonItem: UIBarButtonItem {
@@ -29,7 +29,7 @@ extension UIViewController {
     }
     
     /// Selector for dismissing this view controller.
-    @objc open func dismissBarButtonAction(sender: UIBarButtonItem?) {
+    @objc func dismissBarButtonAction(sender: UIBarButtonItem?) {
         self.dismiss(animated: true)
     }
     

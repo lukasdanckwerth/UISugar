@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIAlertController {
+public extension UIAlertController {
     
     /// Presents an alert controller with a single 'OK' action in the given view controller with the given title and message.
     ///
@@ -18,9 +18,10 @@ extension UIAlertController {
     /// - parameter handler: Closure to execute when user taps on 'OK'.
     ///
     /// - returns: The created and presented `UIAlertController`.
-    @discardableResult static func presentAlert(_ vc: UIViewController, title: String? = nil, message: String? = nil, handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertController {
+    @discardableResult
+    static func presentAlert(_ vc: UIViewController, title: String? = nil, message: String? = nil, handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(.default(title: NSLocalizedString("OK", comment: ""), handler: handler))
+        alert.addAction(.ok(handler: handler))
         vc.present(alert, animated: true)
         return alert
     }
@@ -34,7 +35,8 @@ extension UIAlertController {
     /// - parameter handler: Closure to execute when user taps the confirm button.
     ///
     /// - returns: The created and presented `UIAlertController`.
-    @discardableResult static func presentConfirmAlert(_ vc: UIViewController, title: String? = nil, message: String? = nil, buttonTitle: String, handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertController {
+    @discardableResult
+    static func presentConfirmAlert(_ vc: UIViewController, title: String? = nil, message: String? = nil, buttonTitle: String, handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(.destructive(title: buttonTitle, handler: handler))
         alert.addAction(.cancel())

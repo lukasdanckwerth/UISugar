@@ -53,6 +53,4 @@ public extension CGRect {
     var center: CGPoint {
         return CGPoint(x: centerX, y: centerY)
     }
-    
-    /// Returns a Boolean value indicating whether on of the given `x`
 }
