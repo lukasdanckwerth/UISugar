@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     /// Traverses the responder chain and resturns the first reponder which is a `UIViewController`.
     var parentViewController: UIViewController? {
