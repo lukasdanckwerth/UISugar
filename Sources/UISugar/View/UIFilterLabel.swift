@@ -45,8 +45,6 @@ class UIFilterLabel: UILabel {
    func setupButton() -> UIButton {
       let button = UIButton(type: .system)
       button.frame = CGRect(x: 0, y: 0, width: UIFilterLabel.imageSize, height: UIFilterLabel.imageSize)
-      button.setTitleColor(UIColor.wvBlue, for: .normal)
-      button.tintColor = UIColor.wvBlue
       button.addTarget(self, action: #selector(self.buttonClearAction), for: .touchUpInside)
       button.contentMode = .center
       isButtonLoaded = true
@@ -98,9 +96,6 @@ class UIFilterLabel: UILabel {
       
       layer.cornerRadius = UIFilterLabel.cornerRadius
       layer.borderWidth = 1.0   // Can be finetuned
-      layer.borderColor = UIColor.wvBlue.cgColor
-      
-      tintColor = UIColor.wvBlue
       
       insets = .new(horizontal: 8, vertical: 4)
       

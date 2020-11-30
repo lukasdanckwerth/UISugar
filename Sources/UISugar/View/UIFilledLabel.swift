@@ -52,7 +52,6 @@ public class UIFilledLabel: UILabel {
     private func styleMe() {
         backgroundColor = UIColor.clear
         textColor = UIColor.white
-        layer.backgroundColor = UIColor.wvBlue.cgColor
     }
     
     override public func drawText(in rect: CGRect) {

@@ -53,7 +53,6 @@ open class UIFilledSystemButton: UIButton {
    
    func applyDefaults() {
       self.setTitleColor(.white, for: .normal)
-      self.filledBackgroundColor = UIColor.wvBlue
       self.cornerRadius = UISugar.defaultCornerRadius
    }
 }

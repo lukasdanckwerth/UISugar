@@ -64,7 +64,6 @@ open class UIFilledBarButtonItem: UIBarButtonItem {
    
    private func _initialize() {
       customView = _filledButton
-      tintColor = UIColor.wvBlue
       _filledButton.setImage(image, for: .normal)
       _filledButton.addTarget(self, action: #selector(doBarButtonItemAction), for: .touchUpInside)
       _filledButton.contentEdgeInsets = .new(horizontal: 4, vertical: 2)

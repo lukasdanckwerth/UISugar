@@ -5,109 +5,6 @@
 //  Created by Lukas Danckwerth on 30.01.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-#if os(iOS)
-import UIKit
-
-public extension UIColor {
-    
-    // ===-----------------------------------------------------------------------------------------------------------===
-    //
-    // MARK: - WinValue Colors
-    // ===-----------------------------------------------------------------------------------------------------------===
-    
-    /// Returns the default WinValue red color
-    static var wvRed: UIColor {
-        // UIColor(red: 190/255, green: 38/255, blue: 37/255, alpha: 1.0) /* #be2625 */
-        return #colorLiteral(red: 0.7451, green: 0.149, blue: 0.1451, alpha: 1)
-    }
-    
-    /// Returns the default WinValue blue color
-    static var wvBlue: UIColor {
-        // UIColor(red: 26/255, green: 94/255, blue: 142/255, alpha: 1.0) /* #1a5e8e */
-        return #colorLiteral(red: 0.102, green: 0.3686, blue: 0.5569, alpha: 1)
-    }
-    
-    /// Returns the default WinValue light blue.
-    static var wvLightBlue: UIColor {
-        // UIColor(red: 57/255, green: 152/255, blue: 220/255, alpha: 1.0) /* #3998dc */
-        return #colorLiteral(red: 0.2235, green: 0.5961, blue: 0.8627, alpha: 1)
-    }
-    
-    /// Returns the default WinValue turkey.
-    static var wvTurkey: UIColor {
-        // UIColor(red: 90/255, green: 197/255, blue: 211/255, alpha: 1.0) /* #5ac5d3 */
-        return #colorLiteral(red: 0.3529, green: 0.7725, blue: 0.8275, alpha: 1)
-    }
-    
-    /// Returns the default WinValue gray.
-    static var wvGray: UIColor {
-        // UIColor(red: 225/255, green: 229/255, blue: 236/255, alpha: 1.0) /* #e1e5ec */
-        return #colorLiteral(red: 0.8824, green: 0.898, blue: 0.9255, alpha: 1)
-    }
-    
-    
-    /// Returns the default WinValue yellow for bookmark star.
-    static var wvYellow: UIColor {
-        return #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-    }
-    
-    // ===-----------------------------------------------------------------------------------------------------------===
-    //
-    // MARK: - WinValue RestwertBoerse Colors
-    // ===-----------------------------------------------------------------------------------------------------------===
-    
-    /// The default RB orange color.
-    // static let restwertBoerseOrange = #colorLiteral(red: 0.9007799029, green: 0.4747456312, blue: 0.1764956713, alpha: 1)
-    static let restwertBoerseOrange: UIColor = .systemOrange
-    
-    /// The default RB orange color.
-    static let rbOrange = UIColor.restwertBoerseOrange
-    
-    /// The default RB tint color.
-    static let restwertBoerseTint: UIColor = {
-        if #available(iOS 13.0, *) {
-            return UIColor(dynamicProvider: { traitCollection in
-                if traitCollection.userInterfaceStyle == .dark {
-                    return .systemOrange
-                } else {
-                    return .wvBlue
-                }
-            })
-        } else {
-            return .wvBlue
-        }
-    }()
-    
-    
-    
-    // ===-----------------------------------------------------------------------------------------------------------===
-    //
-    // MARK: - WinValue UltraExpert Colors
-    // ===-----------------------------------------------------------------------------------------------------------===
-    
-    /// The default UX purple color.
-    static let ultraExpertPurple = #colorLiteral(red: 0.448834002, green: 0.2150844932, blue: 0.5962926745, alpha: 1)
-    
-    /// The default UX purple color.
-    static let uxPurple = UIColor.ultraExpertPurple
-    
-    
-    
-    /// The default tint color for the app.  For now this is `UIColor.wvBlue`.
-    static let defaultTintColor = UIColor.wvBlue // UIButton.appearance().tintColor
-    
-    // ===-----------------------------------------------------------------------------------------------------------===
-    //
-    // MARK: - System Colors
-    // ===-----------------------------------------------------------------------------------------------------------===
-    
-    static var officialAppleLabelPlaceholderGray: UIColor {
-        return UIColor(red: 0, green: 0, blue: 0.0980392, alpha: 0.22)
-    }
-    
-    static let system = UIButton.appearance().tintColor
-    
-}
 
 // ===-----------------------------------------------------------------------------------------------------------===
 //
@@ -121,6 +18,7 @@ public extension UIColor {
 //  Copyright (c) 2015-2019 Grigory Avdyushin. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIColor {

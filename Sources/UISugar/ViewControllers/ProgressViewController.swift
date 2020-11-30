@@ -17,7 +17,6 @@ class ProgressViewController: UIViewController {
    /// Progress indicator view.
    lazy var progressView: UIProgressView = {
       let progressView = UIProgressView()
-      progressView.tintColor = UIColor.wvBlue
       progressView.alpha = 0
       return progressView
    }()
