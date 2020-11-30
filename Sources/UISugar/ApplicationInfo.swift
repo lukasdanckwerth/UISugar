@@ -1,0 +1,83 @@
+//
+//  ApplicationInfo.swift
+//  
+//
+//  Created by Lukas on 30.11.20.
+//
+
+import Foundation
+import CoreTelephony
+
+public struct ApplicationInfo {
+    public static let shared = ApplicationInfo()
+    
+    // MARK: - Main Bundle
+    
+    /// Returns the display name of the application.
+    ///
+    public var displayName: String? {
+        Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String
+    }
+    
+    /// Returns the name of the application.
+    ///
+    public var name: String? {
+        Bundle.main.infoDictionary?["CFBundleName"] as? String
+    }
+    
+    /// Returns the build number of the application.
+    ///
+    public var buildNumber: String? {
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+    }
+    
+    /// Returns the version of the application.
+    ///
+    public var version: String? {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    
+    /// Returns a string with the version and build number of of the application.
+    ///
+    public var fullVersion: String? {
+        "\(version ?? "0") (\(buildNumber ?? "0"))"
+    }
+    
+    /// Returns a string with the version and build number of of the application.
+    ///
+    public var fullName: String? {
+        "\(name ?? "Unknown") \(fullVersion ?? "-")"
+    }
+    
+    // MARK: - Carrier
+    
+    /// Returns the `CTCarrier` of the device.
+    ///
+    var carrier: CTCarrier? {
+        CTTelephonyNetworkInfo().subscriberCellularProvider
+    }
+    
+    /// Returns the carrier's name.
+    ///
+    public var carrierName: String? {
+        carrier?.carrierName
+    }
+    
+    /// Returns the mobile country code.
+    ///
+    public var mobileCountryCode: String? {
+        carrier?.mobileCountryCode
+    }
+    
+    /// Returns the mobile network code.
+    ///
+    public var mobileNetworkCode: String? {
+        carrier?.mobileNetworkCode
+    }
+    
+    /// Returns the iso country code.
+    ///
+    public var isoCountryCode: String? {
+        carrier?.isoCountryCode
+    }
+}
