@@ -74,7 +74,7 @@ public class UIRoundedEdgeButton: UIButton {
     }
     
     /// Reference to a possible represented object.
-    public var representedObject: Any?
+    public var selectableCharacter: Any?
     
     
     // MARK: - Initialization

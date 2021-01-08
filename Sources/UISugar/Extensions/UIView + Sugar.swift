@@ -1,9 +1,8 @@
 //
-//  ExtensionUIView.swift
-//  UltraExpert-Go
+//  UIView + Sugar.swift
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 29.01.18.
-//  Copyright © 2018 WinValue. All rights reserved.
 //
 
 import UIKit
@@ -46,6 +45,8 @@ public extension UIView {
             })
         })
     }
+    
+    
     
     
     /// Returns an `UIImage` representation of the view.

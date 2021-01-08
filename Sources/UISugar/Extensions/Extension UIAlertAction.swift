@@ -68,22 +68,22 @@ public extension UIAlertAction {
     var isChecked: Bool? {
         get {
             // guard self.responds(to: Selector(Constants.checkedKey)) else { return nil }
-            return self.value(forKey: Constants.checkedKey) as? Bool
+            return self.value(forKey: Patterns.checkedKey) as? Bool
         }
         set {
             // guard self.responds(to: Selector(Constants.checkedKey)) else { return }
-            self.setValue(newValue ?? false, forKey: Constants.checkedKey)
+            self.setValue(newValue ?? false, forKey: Patterns.checkedKey)
         }
     }
     
     var image: UIImage? {
         get {
-            guard self.responds(to: Selector(Constants.imageKey)) else { return nil }
-            return self.value(forKey: Constants.imageKey) as? UIImage
+            guard self.responds(to: Selector(Patterns.imageKey)) else { return nil }
+            return self.value(forKey: Patterns.imageKey) as? UIImage
         }
         set {
-            guard self.responds(to: Selector(Constants.imageKey)) else { return }
-            self.setValue(newValue, forKey: Constants.imageKey)
+            guard self.responds(to: Selector(Patterns.imageKey)) else { return }
+            self.setValue(newValue, forKey: Patterns.imageKey)
         }
     }
     
@@ -92,7 +92,7 @@ public extension UIAlertAction {
     // MARK: - Constants
     // ===-----------------------------------------------------------------------------------------------------------===
     
-    private struct Constants {
+    private struct Patterns {
         static let checkedKey = "checked"
         static let imageKey = "image"
     }

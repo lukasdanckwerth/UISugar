@@ -56,7 +56,7 @@ class UIFilterLabel: UILabel {
    var isButtonLoaded = false
    
    /// Reference to an optional reprecented object.
-   var representedObject: Any?
+   var selectableCharacter: Any?
    
    /// Reference to the UIEdgeInsets used for this UIFilterLabel.
    var insets: UIEdgeInsets = .zero

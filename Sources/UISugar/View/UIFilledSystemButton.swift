@@ -31,7 +31,7 @@ open class UIFilledSystemButton: UIButton {
    // MARK: - Initialization
    // ===-----------------------------------------------------------------------------------------------------------===
    
-   convenience init(title: String) {
+   public convenience init(title: String) {
       self.init(type: .system)
 
       setTitle(title, for: .normal)
