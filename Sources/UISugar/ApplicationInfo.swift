@@ -4,9 +4,7 @@
 //
 //  Created by Lukas on 30.11.20.
 //
-
 import Foundation
-import CoreTelephony
 
 public struct ApplicationInfo {
     public static let shared = ApplicationInfo()
@@ -48,13 +46,30 @@ public struct ApplicationInfo {
     public var fullName: String? {
         "\(name ?? "Unknown") \(fullVersion ?? "-")"
     }
-    
+}
+
+protocol CarrierInfo {
+    var carrierName: String? { get }
+    var mobileCountryCode: String? { get }
+    var mobileNetworkCode: String? { get }
+    var isoCountryCode: String? { get }
+}
+
+#if canImport(CoreTelephony)
+import CoreTelephony
+#endif
+
+extension ApplicationInfo {
     // MARK: - Carrier
     
     /// Returns the `CTCarrier` of the device.
     ///
-    var carrier: CTCarrier? {
-        CTTelephonyNetworkInfo().subscriberCellularProvider
+    var carrier: CarrierInfo? {
+        #if canImport(CTTelephonyNetworkInfo)
+        return CTTelephonyNetworkInfo().subscriberCellularProvider
+        #else
+        return nil
+        #endif
     }
     
     /// Returns the carrier's name.
