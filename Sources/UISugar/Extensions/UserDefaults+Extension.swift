@@ -12,21 +12,35 @@ import UIKit
 
 // MARK: - Additional Objects Storage -
 
-extension UserDefaults {
-    
+public extension UserDefaults {
     
     // MARK: - Add `UIColor` Storage
     
     /// Returns the `UIColor` object associated with the specified key.
+    ///
     func color(forKey key: String) -> UIColor? {
         return objectFromData(forKey: key)
     }
     
     /// Sets the value of the specified default key to the specified `UIColor` object.
+    ///
     func set(color: UIColor?, forKey key: String) {
         setObjectToData(t: color, forKey: key)
     }
     
+    // MARK: - Add `Date` Storage
+    
+    /// Returns the `Date` object associated with the specified key.
+    ///
+    func date(forKey key: String) -> Date? {
+        return value(forKey: key) as? Date
+    }
+    
+    /// Sets the value of the specified default key to the specified `Date` object.
+    ///
+    func set(date: Date?, forKey key: String) {
+        setValue(date, forKey: key)
+    }
     
     
     // ===-----------------------------------------------------------------------------------------------------------===
@@ -95,7 +109,7 @@ extension UserDefaults {
 //
 // MARK: - Print -
 // ===--------------------------------------------------------------------------------------------------------------===
-extension UserDefaults {
+public extension UserDefaults {
     
     func print(defaultsName name: String) {
         Swift.print(toString(defaultsName: name))

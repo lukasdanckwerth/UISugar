@@ -7,6 +7,8 @@
 import Foundation
 
 public struct ApplicationInfo {
+    /// The default shared intance.
+    ///
     public static let shared = ApplicationInfo()
     
     // MARK: - Main Bundle

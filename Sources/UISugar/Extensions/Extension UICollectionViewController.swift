@@ -10,6 +10,7 @@ import UIKit
 public extension UICollectionViewController {
     
     /// Returns the flow layout of the collection view if any.
+    @objc
     var flowLayout: UICollectionViewFlowLayout? {
         return collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
     }
