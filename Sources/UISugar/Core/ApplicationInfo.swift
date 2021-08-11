@@ -19,10 +19,24 @@ public struct ApplicationInfo {
         Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String
     }
     
+    /// Returns the localized display name of the application.
+    ///
+    public var localizedDisplayName: String? {
+        guard let displayName = self.displayName else { return nil }
+        return NSLocalizedString(displayName, comment: "")
+    }
+    
     /// Returns the name of the application.
     ///
     public var name: String? {
         Bundle.main.infoDictionary?["CFBundleName"] as? String
+    }
+    
+    /// Returns the localized name of the application.
+    ///
+    public var localizedName: String? {
+        guard let name = self.name else { return nil }
+        return NSLocalizedString(name, comment: "")
     }
     
     /// Returns the build number of the application.
@@ -47,6 +61,12 @@ public struct ApplicationInfo {
     ///
     public var fullName: String? {
         "\(name ?? "Unknown") \(fullVersion ?? "-")"
+    }
+    
+    /// Returns a localized string with the version and build number of of the application.
+    ///
+    public var localizedFullName: String? {
+        "\(NSLocalizedString(name ?? "Unknown", comment: "")) \(fullVersion ?? "-")"
     }
 }
 

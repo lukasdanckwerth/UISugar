@@ -9,7 +9,7 @@ import Foundation
 
 /// Extends the `NotificationCenter` about some convenience functionality.
 ///
-extension NotificationCenter {
+public extension NotificationCenter {
     
     /// Post a new `Notification` for the given name on the main dispatch queue.
     ///

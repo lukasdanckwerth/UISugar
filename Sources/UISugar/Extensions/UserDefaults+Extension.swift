@@ -104,32 +104,4 @@ public extension UserDefaults {
     }
 }
 
-
-// ===--------------------------------------------------------------------------------------------------------------===
-//
-// MARK: - Print -
-// ===--------------------------------------------------------------------------------------------------------------===
-public extension UserDefaults {
-    
-    func print(defaultsName name: String) {
-        Swift.print(toString(defaultsName: name))
-    }
-    
-    func toString(defaultsName name: String) -> String {
-        
-        let filtered = self.dictionaryRepresentation().filter({ $0.key.hasPrefix("kWV") })
-        
-        guard !filtered.isEmpty else {
-            return "\(name) Defaults is empty"
-        }
-        
-        var content: String = "\(name)\n------------------------------------\n\n"
-        
-        for (key, value) in filtered {
-            content += " - \(key) = \(value)\n"
-        }
-        
-        return content
-    }
-}
 #endif

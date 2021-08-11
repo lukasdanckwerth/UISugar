@@ -11,17 +11,24 @@ import Foundation
 public extension TimeInterval {
     
     /// Returns the default fade duration.
-    static var defaultFadeDuration: TimeInterval {
-        return 0.3
-    }
+    ///
+    static var defaultFadeDuration: TimeInterval { return 0.3 }
     
-    /// Returns the time intervall for one hour.
-    static var oneHour: TimeInterval {
-        return 60 * 60
-    }
+    /// The time intervall for one minute.
+    ///
+    static let oneMinute: TimeInterval = 60
     
-    /// Returns the time intervall for twenty four hours.
-    static var twentyFourHours: TimeInterval {
-        return 24 * oneHour
-    }
+    /// The time intervall for one hour.
+    static let oneHour: TimeInterval = oneMinute * 60
+    
+    /// The time intervall for twenty for hours.
+    ///
+    static let twentyFourHours: TimeInterval = oneHour * 24
+    
+    /// The time intervall for twenty for one day.
+    ///
+    static let oneDay: TimeInterval = twentyFourHours
+    
+    /// The time intervall for one year.
+    static let oneYear: TimeInterval = oneDay * 365
 }

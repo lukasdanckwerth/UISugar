@@ -57,7 +57,7 @@ public extension DateFormatter {
         
     }()
     
-    static let onlyTime: DateFormatter = DateFormatter("hh:mm")
+    static let onlyTime: DateFormatter = DateFormatter("HH:mm")
     
     /**
      DateFormatter with format "yyyy-MM".
