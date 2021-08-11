@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 26.04.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UIApplication {
@@ -16,3 +16,4 @@ public extension UIApplication {
         return value(forKey: "statusBar") as? UIView
     }
 }
+#endif

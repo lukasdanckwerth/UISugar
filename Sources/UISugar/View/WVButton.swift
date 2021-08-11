@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 27.01.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 /// A simple `UIButton` subclass which additionally can have a represented object of type `Type`.
@@ -22,3 +22,4 @@ class WVButton<Type>: UIButton {
       return b
    }
 }
+#endif

@@ -4,7 +4,7 @@
 //
 //  Created by Lukas on 15.12.20.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UIImage {
@@ -18,3 +18,4 @@ public extension UIImage {
         return image!
     }
 }
+#endif

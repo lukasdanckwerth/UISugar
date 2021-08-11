@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 24.03.19.
 //  Copyright © 2019 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 /// ExtensionUIToolbar
@@ -22,3 +22,4 @@ extension UIToolbar {
         setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
     }
 }
+#endif

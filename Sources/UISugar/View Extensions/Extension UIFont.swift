@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 29.02.20.
 //  Copyright © 2020 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit.UIFont
 
 extension UIFont {
@@ -25,3 +25,4 @@ extension UIFont {
       return UIFont.systemFont(ofSize: UIFont.systemFontSize)
    }
 }
+#endif

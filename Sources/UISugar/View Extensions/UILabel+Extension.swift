@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 24.01.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UILabel {
@@ -52,3 +52,4 @@ public extension UILabel {
         self.attributedText = attributedString
     }
 }
+#endif

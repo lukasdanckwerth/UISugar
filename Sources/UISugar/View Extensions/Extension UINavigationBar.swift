@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 24.03.19.
 //  Copyright © 2019 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 /// ExtensionUINavigationBar
@@ -32,3 +32,4 @@ extension UINavigationBar {
       self.pushItem(item, animated: false)
    }
 }
+#endif

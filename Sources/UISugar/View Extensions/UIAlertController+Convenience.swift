@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 30.01.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UIAlertController {
@@ -44,3 +44,4 @@ public extension UIAlertController {
         return alert
     }
 }
+#endif

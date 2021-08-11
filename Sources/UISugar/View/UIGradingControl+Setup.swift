@@ -5,7 +5,7 @@
 //  Created by Lukas on 30.01.20.
 //  Copyright © 2020 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -59,3 +59,4 @@ extension UIGradingControl {
       }
    }
 }
+#endif

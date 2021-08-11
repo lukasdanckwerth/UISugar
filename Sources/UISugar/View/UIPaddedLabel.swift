@@ -5,7 +5,7 @@
 //  Created by Lukas on 15.08.19.
 //  Copyright © 2019 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 @IBDesignable class UIPaddedLabel: UILabel {
@@ -38,3 +38,4 @@ import UIKit
         return size
     }
 }
+#endif

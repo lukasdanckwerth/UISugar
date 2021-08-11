@@ -4,7 +4,7 @@
 //
 //  Created by Lukas Danckwerth on 07.12.17.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 /** Used for offer type with either R (Restwertboerse) or F (Flotte) */
@@ -58,3 +58,4 @@ public class UIFilledLabel: UILabel {
         super.drawText(in: insets == nil ? rect : rect.insetBy(dx: insets!.left, dy: insets!.top))
     }
 }
+#endif

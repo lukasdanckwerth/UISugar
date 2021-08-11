@@ -6,6 +6,7 @@
 //  Copyright © 2019 WinValue. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit.UICollectionViewCell
 
 public extension UICollectionViewCell {
@@ -37,3 +38,4 @@ public extension UICollectionViewCell {
       collectionView.reloadItems(at: [indexPath])
    }
 }
+#endif

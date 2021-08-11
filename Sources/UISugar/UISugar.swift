@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 09.09.19.
 //  Copyright © 2019 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public struct UISugar {
@@ -55,3 +55,4 @@ public struct UISugar {
    
    
 }
+#endif

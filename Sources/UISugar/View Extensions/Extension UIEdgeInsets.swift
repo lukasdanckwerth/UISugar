@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 28.03.18.
 //  Copyright © 2018 Lukas Danckwerth. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UIEdgeInsets {
@@ -41,3 +41,4 @@ extension UIEdgeInsets: ExpressibleByIntegerLiteral {
         self = UIEdgeInsets(top: cgFloat, left: cgFloat, bottom: cgFloat, right: cgFloat)
     }
 }
+#endif

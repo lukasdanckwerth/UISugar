@@ -50,11 +50,11 @@ extension CGSize {
 
 // MARK: - Extension LatLng
 
-extension LatLng {
-   
-   var location2D: CLLocationCoordinate2D {
-      return CLLocationCoordinate2D(latitude: lng, longitude: lat)
-   }
-}
+//extension LatLng {
+//   
+//   var location2D: CLLocationCoordinate2D {
+//      return CLLocationCoordinate2D(latitude: lng, longitude: lat)
+//   }
+//}
 
 #endif

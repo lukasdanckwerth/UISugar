@@ -5,6 +5,7 @@
 //  Created by Lukas Danckwerth on 07.05.18.
 //  Copyright © 2018 Lukas Danckwerth. All rights reserved.
 //
+#if canImport(UIKit)
 import UIKit
 
 public extension UICollectionViewController {
@@ -70,3 +71,4 @@ public extension UICollectionViewController {
       #endif
    }
 }
+#endif

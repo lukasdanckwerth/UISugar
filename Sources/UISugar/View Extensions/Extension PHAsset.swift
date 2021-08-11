@@ -7,6 +7,7 @@
 //
 
 #if canImport(Photos)
+#if canImport(UIKit)
 import Photos.PHAsset
 import UIKit.UIImage
 
@@ -31,4 +32,5 @@ extension PHAsset {
       }
    }
 }
+#endif
 #endif

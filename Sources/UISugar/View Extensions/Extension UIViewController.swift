@@ -5,8 +5,9 @@
 //  Created by Lukas Danckwerth on 25.01.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
+
 #if canImport(MBProgressHUD)
 import MBProgressHUD
 #endif
@@ -196,3 +197,4 @@ extension UICollectionViewController {
         child.viewIfLoaded?.frame.origin.y += collectionView.contentOffset.y
     }
 }
+#endif

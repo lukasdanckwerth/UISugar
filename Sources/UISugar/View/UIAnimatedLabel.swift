@@ -4,7 +4,7 @@
 //
 //  Created by Lukas Danckwerth on 10.10.17.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 class UIAnimatedLabel: UILabel {
@@ -52,3 +52,4 @@ class UIAnimatedLabel: UILabel {
       }
    }
 }
+#endif

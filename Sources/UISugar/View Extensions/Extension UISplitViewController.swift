@@ -4,7 +4,7 @@
 //
 //  Created by Lukas Danckwerth on 19.12.17.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 extension UISplitViewController {
@@ -88,4 +88,4 @@ extension UISplitViewController {
 //      }
 //   }
 }
-
+#endif

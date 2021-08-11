@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 04.03.19.
 //  Copyright © 2019 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 extension UIImageView {
@@ -43,3 +43,4 @@ extension UIImageView {
       self.isHidden = image == nil
    }
 }
+#endif

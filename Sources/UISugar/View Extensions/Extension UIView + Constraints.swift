@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 11.03.20.
 //  Copyright © 2020 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 extension UIView {
@@ -81,3 +81,4 @@ extension UIView {
       self.setHeightAnchor(constant: height)
    }
 }
+#endif

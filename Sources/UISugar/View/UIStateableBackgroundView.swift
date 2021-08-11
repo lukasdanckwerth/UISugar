@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 24.01.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 class UIStateableBackgroundView: UIView {
@@ -101,3 +101,4 @@ class UIStateableBackgroundView: UIView {
       layoutSubviews()
    }
 }
+#endif

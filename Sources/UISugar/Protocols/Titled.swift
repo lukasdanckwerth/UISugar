@@ -8,14 +8,24 @@
 
 import Foundation
 
+/// Protocol for objects that have a title.
+///
 public protocol Titled {
-   var title: String { get }
+    /// The title.
+    ///
+    var title: String { get }
 }
 
+/// Protocol for objects that have a localized title.
+///
 public protocol LocalizedTitled: Titled {
-   var localizedTitle: String { get }
+    /// Returns the localized version of the title.
+    ///
+    var localizedTitle: String { get }
 }
 
+/// Default implementation of the `localizedTitle` property.
+///
 public extension LocalizedTitled {
-   var localizedTitle: String { NSLocalizedString(title, comment: "Unknown") }
+    var localizedTitle: String { NSLocalizedString(title, comment: "Unknown") }
 }

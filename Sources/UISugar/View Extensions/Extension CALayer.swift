@@ -6,6 +6,7 @@
 //  Copyright © 2019 WinValue. All rights reserved.
 //
 
+#if !os(macOS)
 import UIKit
 
 extension CALayer {
@@ -25,3 +26,4 @@ extension CALayer {
       
    }
 }
+#endif

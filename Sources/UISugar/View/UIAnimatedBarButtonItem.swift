@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 29.05.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 class UIAnimatedBarButtonItem: UIBarButtonItem {
@@ -109,3 +109,4 @@ class UIAnimatedBarButtonItem: UIBarButtonItem {
         }
     }
 }
+#endif

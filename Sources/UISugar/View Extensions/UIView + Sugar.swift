@@ -4,7 +4,7 @@
 //
 //  Created by Lukas Danckwerth on 29.01.18.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UIView {
@@ -66,3 +66,4 @@ public extension UIView {
         }
     }
 }
+#endif

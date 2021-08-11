@@ -4,7 +4,7 @@
 //
 //  Created by Lukas Danckwerth on 07.12.17.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 @IBDesignable
@@ -27,3 +27,4 @@ class UIRoundIndicatorView: UIView {
       layer.cornerRadius = layer.frame.width / 2
    }
 }
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2018 WinValue. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UIButton {
@@ -24,3 +25,4 @@ extension UIButton {
       }
    }
 }
+#endif

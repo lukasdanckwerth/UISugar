@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 22.02.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 extension UINavigationController {
@@ -25,3 +25,4 @@ extension UINavigationController {
         CATransaction.commit()
     }
 }
+#endif

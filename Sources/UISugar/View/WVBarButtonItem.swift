@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 29.01.18.
 //  Copyright © 2018 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 class WVBarButtonItem: UIBarButtonItem {
@@ -44,3 +44,4 @@ class WVBarButtonItem: UIBarButtonItem {
       closure?()
    }
 }
+#endif

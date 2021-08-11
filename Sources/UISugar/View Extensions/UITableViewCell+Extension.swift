@@ -4,7 +4,7 @@
 //
 //  Created by Lukas Danckwerth on 28.10.20.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UITableViewCell {
@@ -19,3 +19,4 @@ public extension UITableViewCell {
         return tableView?.parentViewController as? UITableViewController
     }
 }
+#endif

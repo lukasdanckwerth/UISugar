@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 05.10.19.
 //  Copyright © 2019 WinValue. All rights reserved.
 //
-
+#if canImport(UIKit)
 import Foundation
 import UIKit.UIImage
 
@@ -26,3 +26,4 @@ protocol UISortHeaderViewDelegate: class {
    func sortHeaderView(_ sortHeaderView: UISortHeaderView, didSelectSortItemAtIndex index: Int?)
    
 }
+#endif
