@@ -45,6 +45,7 @@ public class Logger {
     
     /// The servertiy of logging
     public var severity: Logger.Severity
+    
     /// Date formatter
     public lazy var formatter: DateFormatter = {
         let f = DateFormatter()
@@ -153,7 +154,7 @@ public class Logger {
     
     // MAKR: - Auxiliary functions
     
-    fileprivate func internalPrint(file: String = #file, function: String = #function, line: Int = #line, column: Int = #column, severity: Severity, _ more: [Any?]) {
+    internal func internalPrint(file: String = #file, function: String = #function, line: Int = #line, column: Int = #column, severity: Severity, _ more: [Any?]) {
         
         #if DEBUG
         // nothing to do here
@@ -198,24 +199,4 @@ public class Logger {
         let components = filePath.components(separatedBy: "/")
         return components.isEmpty ? "" : components.last!.replacingOccurrences(of: ".swift", with: "")
     }
-}
-
-public func verbose(file: String = #file, function: String = #function, line: Int = #line, column: Int = #column, _ more: Any?...) {
-    Logger.default.internalPrint(file: file, function: function, line: line, column: column, severity: .verbose, more)
-}
-
-public func debug(file: String = #file, function: String = #function, line: Int = #line, column: Int = #column, _ more: Any?...) {
-    Logger.default.internalPrint(file: file, function: function, line: line, column: column, severity: .debug, more)
-}
-
-public func info(file: String = #file, function: String = #function, line: Int = #line, column: Int = #column, _ more: Any?...) {
-    Logger.default.internalPrint(file: file, function: function, line: line, column: column, severity: .info, more)
-}
-
-public func warning(file: String = #file, function: String = #function, line: Int = #line, column: Int = #column, _ more: Any?...) {
-    Logger.default.internalPrint(file: file, function: function, line: line, column: column, severity: .warning, more)
-}
-
-public func error(file: String = #file, function: String = #function, line: Int = #line, column: Int = #column, _ more: Any?..., throwable: Any? = nil) {
-    Logger.default.internalPrint(file: file, function: function, line: line, column: column, severity: .error, more)
 }

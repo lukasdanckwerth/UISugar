@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     
     /// Returns a string from the given date formatted in the form of 'yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ'.
     ///
