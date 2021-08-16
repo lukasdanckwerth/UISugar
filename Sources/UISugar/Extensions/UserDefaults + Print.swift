@@ -29,11 +29,17 @@ public extension UserDefaults {
             return "\(name) Defaults is empty"
         }
         
-        var content: String = "\(name)\n------------------------------------\n\n"
+        var content: String = """
+        Print user defaults.
         
-        for (key, value) in dictionary {
-            content += " - \(key) = \(value)\n"
-        }
+        Defaults Name:  \(name)
+        Filter Prefix:  \(filterPrefix ?? "No filter selected.")
+        
+        
+        """
+        
+        content += dictionary.map({ "- \($0) = \($1)" }).joined(separator: "\n")
+        content += "\n"
         
         return content
     }

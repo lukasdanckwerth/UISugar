@@ -9,17 +9,25 @@ import Foundation
 
 public extension Date {
     
+    /// Returns a Boolean value indicating whether the date is in the future or not.
+    var isInTheFuture: Bool {
+        return self > Date()
+    }
+    
     /// Returns the date with the same time of the day before.
+    ///
     var dayBefore: Date {
         return self - TimeInterval.twentyFourHours
     }
     
     /// Returns the date with the same time of the day after.
+    ///
     var dayAfter: Date {
         return self + TimeInterval.twentyFourHours
     }
     
     /// Returns the date withe hour, minutes, seconds and nanoseconds set to `0`.
+    ///
     var normalized: Date? {
         let calendar = Calendar(identifier: .gregorian)
         var components = calendar.dateComponents([

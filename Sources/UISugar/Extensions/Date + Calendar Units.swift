@@ -11,7 +11,7 @@ public extension Date {
     
     // For shorter call of current calendar within NSDate instance
     var calendar: Calendar {
-//        return Calendar.current
+        //        return Calendar.current
         return Calendar(identifier: .gregorian)
     }
     

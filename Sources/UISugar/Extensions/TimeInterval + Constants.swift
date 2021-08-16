@@ -30,5 +30,6 @@ public extension TimeInterval {
     static let oneDay: TimeInterval = twentyFourHours
     
     /// The time intervall for one year.
+    ///
     static let oneYear: TimeInterval = oneDay * 365
 }
