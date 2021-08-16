@@ -43,8 +43,9 @@ public extension UIColor {
         guard
             let hex = Int(string, radix: 16),
             let format = ColorFormat(bitsCount: string.count * 4) else {
-                self.init(white: 0, alpha: 0)
-                return
+            
+            self.init(white: 0, alpha: 0)
+            return
         }
         
         self.init(hex: hex, format: format)

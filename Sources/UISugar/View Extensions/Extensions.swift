@@ -14,38 +14,39 @@ import Cocoa
 import MapKit
 
 extension NSImage {
-   
-   var pngData: Data? {
-      guard let tiffRepresentation = tiffRepresentation, let bitmapImage = NSBitmapImageRep(data: tiffRepresentation) else { return nil }
-      return bitmapImage.representation(using: .png, properties: [:])
-   }
-   
-   @discardableResult func pngWrite(to url: URL, options: Data.WritingOptions = .atomic) -> Bool {
-      do {
-         try pngData?.write(to: url, options: options)
-         return true
-      } catch {
-         print(error)
-         return false
-      }
-   }
+    
+    var pngData: Data? {
+        guard let tiffRepresentation = tiffRepresentation, let bitmapImage = NSBitmapImageRep(data: tiffRepresentation) else { return nil }
+        return bitmapImage.representation(using: .png, properties: [:])
+    }
+    
+    @discardableResult
+    func pngWrite(to url: URL, options: Data.WritingOptions = .atomic) -> Bool {
+        do {
+            try pngData?.write(to: url, options: options)
+            return true
+        } catch {
+            print(error)
+            return false
+        }
+    }
 }
 
 extension NSView {
-   var snapshot: NSImage {
-      guard let bitmapRep = bitmapImageRepForCachingDisplay(in: bounds) else { return NSImage() }
-      cacheDisplay(in: bounds, to: bitmapRep)
-      let image = NSImage()
-      image.addRepresentation(bitmapRep)
-      bitmapRep.size = bounds.size.doubleScale()
-      return image
-   }
+    var snapshot: NSImage {
+        guard let bitmapRep = bitmapImageRepForCachingDisplay(in: bounds) else { return NSImage() }
+        cacheDisplay(in: bounds, to: bitmapRep)
+        let image = NSImage()
+        image.addRepresentation(bitmapRep)
+        bitmapRep.size = bounds.size.doubleScale()
+        return image
+    }
 }
 
 extension CGSize {
-   func doubleScale() -> CGSize {
-      return CGSize(width: width * 2, height: height * 2)
-   }
+    func doubleScale() -> CGSize {
+        return CGSize(width: width * 2, height: height * 2)
+    }
 }
 
 // MARK: - Extension LatLng

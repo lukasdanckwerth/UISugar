@@ -5,7 +5,7 @@
 //  Created by Lukas Danckwerth on 16.02.20.
 //  Copyright © 2020 WinValue. All rights reserved.
 //
-#if os(iOS)
+#if canImport(UIKit)
 import UIKit
 
 // ===-----------------------------------------------------------------------------------------------------------===
@@ -95,6 +95,7 @@ public extension UIAlertAction {
     private struct Patterns {
         static let checkedKey = "checked"
         static let imageKey = "image"
+        static let titleColor = "titleColor"
     }
 }
 #endif
