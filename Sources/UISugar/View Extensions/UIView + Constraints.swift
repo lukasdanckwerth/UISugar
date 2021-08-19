@@ -28,7 +28,20 @@ public extension UIView {
         ])
     }
     
+    /// Binds the receiver to the given layout guide.
+    ///
+    func bindTo(layoutGuide: UILayoutGuide, insets: UIEdgeInsets = .zero) {
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: insets.top),
+            leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: insets.left),
+            trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor, constant: -insets.right),
+            bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: -insets.bottom)
+        ])
+    }
+    
     /// Adds the receiver to the given `UIView` in `superview` and binds it's frame to `superview`s frame
+    ///
     func bind(to superview: UIView, insets: UIEdgeInsets = .zero) {
         self.translatesAutoresizingMaskIntoConstraints = false
         superview.addSubview(self)
@@ -80,11 +93,7 @@ public extension UIView {
     
     func centerInSuperview() {
         guard let superview = self.superview else { return }
-        translatesAutoresizingMaskIntoConstraints = false
-        superview.addConstraints([
-            centerXAnchor.constraint(equalTo: superview.centerXAnchor),
-            centerYAnchor.constraint(equalTo: superview.centerYAnchor)
-        ])
+        center(in: superview)
     }
     
     func setWidthAnchor(constant: CGFloat) {

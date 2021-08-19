@@ -12,7 +12,9 @@ import StoreKit
 public enum AppStoreReviewManager {
     
     public static var reviewWorthyActionsNumbers = [
+        10,
         30,
+        70,
         100,
         200,
         400
