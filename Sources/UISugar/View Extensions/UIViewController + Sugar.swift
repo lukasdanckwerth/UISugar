@@ -30,7 +30,8 @@ public extension UIViewController {
     }
     
     /// Selector for dismissing this view controller.
-    @objc func dismissBarButtonAction(sender: UIBarButtonItem?) {
+    @objc
+    open func dismissBarButtonAction(sender: UIBarButtonItem?) {
         self.dismiss(animated: true)
     }
     

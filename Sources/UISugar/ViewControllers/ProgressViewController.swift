@@ -9,7 +9,7 @@
 #if os(iOS)
 import UIKit
 
-class ProgressViewController: UIViewController {
+public class ProgressViewController: UIViewController {
    
    
    // MARK: - Properties
@@ -52,7 +52,7 @@ class ProgressViewController: UIViewController {
    
    // MARK: - Override UIViewController
    
-   override func viewDidLoad() {
+    public override func viewDidLoad() {
       super.viewDidLoad()
       
       view.addSubview(progressView)
@@ -65,7 +65,7 @@ class ProgressViewController: UIViewController {
       progress = 0
    }
    
-   override func viewWillAppear(_ animated: Bool) {
+   public override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       
       // We use a 0.5 second delay to not show an progress view in case the data loads very quickly.
@@ -78,7 +78,7 @@ class ProgressViewController: UIViewController {
    }
    
    #if swift(>=4.2)
-   override func didMove(toParent parent: UIViewController?) {
+   public override func didMove(toParent parent: UIViewController?) {
       super.didMove(toParent: parent)
       
       if let parentFrame = parent?.view.frame {
@@ -96,7 +96,7 @@ class ProgressViewController: UIViewController {
    #endif
    
    
-   override func viewDidLayoutSubviews() {
+   public override func viewDidLayoutSubviews() {
       super.viewDidLayoutSubviews()
       
       let centerX = view.bounds.size.width / 2

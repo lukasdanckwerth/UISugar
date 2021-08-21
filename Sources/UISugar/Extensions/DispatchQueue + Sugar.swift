@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension DispatchQueue {
+public extension DispatchQueue {
     
     /// Returns the defaul global background queue.  Shortcut for `DispatchQueue.global(qos: .background)`
     static var background: DispatchQueue {
