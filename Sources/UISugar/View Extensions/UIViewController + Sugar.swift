@@ -15,17 +15,17 @@ import MBProgressHUD
 public extension UIViewController {
     
     /// A bar button item to dismiss this view controller.
-    var wv_dismissButtonItem: UIBarButtonItem {
+    public var wv_dismissButtonItem: UIBarButtonItem {
         return UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissBarButtonAction))
     }
     
     /// A bar button item to dismiss this view controller.
-    var dismissDoneButtonItem: UIBarButtonItem {
+    public var dismissDoneButtonItem: UIBarButtonItem {
         return UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissBarButtonAction))
     }
     
     /// Returns a bar button to dismiss this view controller with an image instead of text.
-    var dismissImageButtonItem: UIBarButtonItem {
+    public var dismissImageButtonItem: UIBarButtonItem {
         return UIBarButtonItem(image: .named("ToolbarIconCancel"), style: .plain, target: self, action: #selector(dismissBarButtonAction))
     }
     
@@ -37,21 +37,23 @@ public extension UIViewController {
     
     /// Returns a bar button item to present the search controller. NOTE: This item only will call the the `presentSearchController(sender:)` of
     /// this view controller. The presentation of the `SearchController` is the responsibility of the developer.
-    var searchButtonItem: UIBarButtonItem {
+    public var searchButtonItem: UIBarButtonItem {
         return UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(presentSearchController(sender:)))
     }
     
     /// Tells this view controller to present a search controller.
-    @objc func presentSearchController(sender: UIBarButtonItem?) {
+    @objc
+    public func presentSearchController(sender: UIBarButtonItem?) {
         /* Nothing to do here. Subclasses should override. */
     }
     
     
     /// Presents the given view controller as the root view controller of a navigation view controller.
-    @discardableResult func presentInNavigationViewController(_ vc: UIViewController,
-                                                              animated: Bool = true,
-                                                              completion: (() -> Void)? = nil,
-                                                              modalPresentationStyle: UIModalPresentationStyle = .currentContext) -> UINavigationController {
+    @discardableResult
+    public func presentInNavigationViewController(_ vc: UIViewController,
+                                                  animated: Bool = true,
+                                                  completion: (() -> Void)? = nil,
+                                                  modalPresentationStyle: UIModalPresentationStyle = .currentContext) -> UINavigationController {
         let navigationVC = UINavigationController(rootViewController: vc)
         navigationVC.modalPresentationStyle = modalPresentationStyle
         self.present(navigationVC, animated: animated, completion: completion)

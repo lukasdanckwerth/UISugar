@@ -26,6 +26,12 @@ public extension Date {
         return self + TimeInterval.twentyFourHours
     }
     
+    /// Returns the date with the same time of the week before.
+    ///
+    var weekBefore: Date {
+        return self - (TimeInterval.twentyFourHours * 7)
+    }
+    
     /// Returns the date withe hour, minutes, seconds and nanoseconds set to `0`.
     ///
     var normalized: Date? {
