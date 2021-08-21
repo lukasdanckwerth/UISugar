@@ -128,6 +128,22 @@ public extension UIViewController {
         return controller
     }
     
+    /// Creates a new instance from a storyboard. NOTE: Preconditions that the name of the storyboard and the identifier
+    /// of the requested view controller are the same as the type name.
+    class func fromMainStoryboard() -> Self {
+        return _fromMainStoryboard()
+    }
+    
+    /// Private internal helper function for `fromStoryboard` class function.
+    private class func _fromMainStoryboard<T>() -> T {
+        
+        // receive 'simple' class name.
+        let name = String(describing: self)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboard.instantiateViewController(withIdentifier: name) as! T
+        return controller
+    }
+    
     @discardableResult func add<Type>(_ child: Type) -> Type where Type: UIViewController {
         child.viewIfLoaded?.frame = view.frame
         
