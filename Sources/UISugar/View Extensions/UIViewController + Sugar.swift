@@ -49,11 +49,14 @@ public extension UIViewController {
     
     
     /// Presents the given view controller as the root view controller of a navigation view controller.
+    ///
     @discardableResult
-    public func presentInNavigationViewController(_ vc: UIViewController,
-                                                  animated: Bool = true,
-                                                  completion: (() -> Void)? = nil,
-                                                  modalPresentationStyle: UIModalPresentationStyle = .currentContext) -> UINavigationController {
+    public func presentInNavigationViewController(
+        _ vc: UIViewController,
+        animated: Bool = true,
+        completion: (() -> Void)? = nil,
+        modalPresentationStyle: UIModalPresentationStyle = .currentContext) -> UINavigationController
+    {
         let navigationVC = UINavigationController(rootViewController: vc)
         navigationVC.modalPresentationStyle = modalPresentationStyle
         self.present(navigationVC, animated: animated, completion: completion)
