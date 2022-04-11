@@ -1,9 +1,9 @@
 //
 //  ExtensionEncodable.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 11.01.18.
-//  Copyright © 2018 WinValue. All rights reserved.
+//  Copyright © 2018 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation

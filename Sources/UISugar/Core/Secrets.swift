@@ -1,9 +1,9 @@
 //
 //  Secrets.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 05.11.19.
-//  Copyright © 2019 WinValue. All rights reserved.
+//  Copyright © 2019 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation

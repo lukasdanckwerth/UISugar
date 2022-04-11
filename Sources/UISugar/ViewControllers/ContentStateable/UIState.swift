@@ -1,9 +1,9 @@
 //
 //  UIState.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 21.01.20.
-//  Copyright © 2020 WinValue. All rights reserved.
+//  Copyright © 2020 Lukas Danckwerth. All rights reserved.
 //
 #if os(iOS)
 import Foundation

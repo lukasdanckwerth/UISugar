@@ -1,35 +1,27 @@
 //
 //  ExtensionArray.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 04.03.19.
-//  Copyright © 2019 WinValue. All rights reserved.
+//  Copyright © 2019 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
 
-/// ExtensionArray
-///
-/// - author: Lukas Danckwerth
-extension Array where Element: Hashable {
-    
-    var toSet: Set<Element> {
-        return Set(self.map{ $0 })
-    }
-}
-
 extension Array {
     
-    
     /// Returns a Boolean value indicating whether the given index is a valid index of the receiver.
+    ///
     func valid(index: Int) -> Bool {
-        return index >= 0 && index < count
+        return count > 0 && index >= 0 && index < count
     }
 }
 
-extension Set {
+extension Array where Element: Hashable {
     
-    var toArray: Array<Element> {
-        return Array(self)
+    /// Returns a set from the elements of this array.
+    ///
+    var toSet: Set<Element> {
+        return Set(self.map{ $0 })
     }
 }

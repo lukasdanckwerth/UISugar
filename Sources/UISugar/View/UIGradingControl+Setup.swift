@@ -1,9 +1,9 @@
 //
 //  UIGradingControl+Setup.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas on 30.01.20.
-//  Copyright © 2020 WinValue. All rights reserved.
+//  Copyright © 2020 Lukas Danckwerth. All rights reserved.
 //
 #if canImport(UIKit)
 import Foundation

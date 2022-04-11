@@ -1,9 +1,9 @@
 //
 //  ExtensionDispatchQueue.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 26.08.19.
-//  Copyright © 2019 WinValue. All rights reserved.
+//  Copyright © 2019 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ public extension DispatchQueue {
     
     /// Returns the defaul global background queue.  Shortcut for `DispatchQueue.global(qos: .background)`
     static var background: DispatchQueue {
-      return DispatchQueue.global(qos: .background)
+        return DispatchQueue.global(qos: .background)
     }
     
     /// Executes the given `background` block asyncron in the globel queue.  When passing a value for `completion`, the block is executed

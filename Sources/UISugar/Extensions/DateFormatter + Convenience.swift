@@ -1,9 +1,9 @@
 //
 //  ExtensionDateFormatter.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 23.02.18.
-//  Copyright © 2018 WinValue. All rights reserved.
+//  Copyright © 2018 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
@@ -11,6 +11,7 @@ import Foundation
 public extension DateFormatter {
     
     /// Creates a new instance from the given values.
+    /// 
     convenience init(_ dateFormat: String, calendar: Calendar = Calendar(identifier: .iso8601), locale: Locale = Locale(identifier: "en_US_POSIX")) {
         self.init()
         self.dateFormat = dateFormat
@@ -19,6 +20,7 @@ public extension DateFormatter {
     }
     
     /// Optional implementation of the `string(from:)` message for convenience.
+    ///
     func optionalString(from date: Date?) -> String? {
         if let date = date {
             return string(from: date)

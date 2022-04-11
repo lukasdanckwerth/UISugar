@@ -1,9 +1,9 @@
 //
 //  Extension PHAsset.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 27.02.20.
-//  Copyright © 2020 WinValue. All rights reserved.
+//  Copyright © 2020 Lukas Danckwerth. All rights reserved.
 //
 
 #if canImport(Photos)

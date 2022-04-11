@@ -1,9 +1,9 @@
 //
 //  UIContentStateViewController.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 06.09.19.
-//  Copyright © 2019 WinValue. All rights reserved.
+//  Copyright © 2019 Lukas Danckwerth. All rights reserved.
 //
 // https://www.swiftbysundell.com/articles/custom-container-view-controllers-in-swift/
 #if os(iOS)

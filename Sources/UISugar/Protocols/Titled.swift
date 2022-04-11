@@ -1,9 +1,9 @@
 //
 //  File.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 20.01.20.
-//  Copyright © 2020 WinValue. All rights reserved.
+//  Copyright © 2020 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
@@ -11,6 +11,7 @@ import Foundation
 /// Protocol for objects that have a title.
 ///
 public protocol Titled {
+    
     /// The title.
     ///
     var title: String { get }
@@ -19,13 +20,13 @@ public protocol Titled {
 /// Protocol for objects that have a localized title.
 ///
 public protocol LocalizedTitled: Titled {
+    
     /// Returns the localized version of the title.
     ///
     var localizedTitle: String { get }
 }
 
-/// Default implementation of the `localizedTitle` property.
-///
+// default implementation
 public extension LocalizedTitled {
     var localizedTitle: String { NSLocalizedString(title, comment: "Unknown") }
 }

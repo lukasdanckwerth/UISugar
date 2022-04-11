@@ -1,14 +1,14 @@
 //
 //  ExtensionURL.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 14.08.19.
-//  Copyright © 2019 WinValue. All rights reserved.
+//  Copyright © 2019 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
 
-extension URL {
+public extension URL {
    
    /// Returns the default `FileManager`
    var fileManager: FileManager {
@@ -231,7 +231,7 @@ extension URL {
 // MARK: - Temporary Files
 // ===--------------------------------------------------------------------------------------------------------------===
 
-extension URL {
+public extension URL {
    
    // ===-----------------------------------------------------------------------------------------------------------===
    //

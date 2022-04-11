@@ -1,9 +1,9 @@
 //
 //  UIPaddedLabel.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas on 15.08.19.
-//  Copyright © 2019 WinValue. All rights reserved.
+//  Copyright © 2019 Lukas Danckwerth. All rights reserved.
 //
 #if canImport(UIKit)
 import UIKit

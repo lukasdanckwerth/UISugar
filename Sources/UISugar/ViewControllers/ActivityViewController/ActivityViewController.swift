@@ -15,22 +15,24 @@ public class ActivityViewController: UIViewController {
     //
     // MARK: - Properties
     
-    let size = CGSize(width: 160, height: 160)
+    let size = CGSize(width: 180, height: 180)
     
     private let containerView = UIView()
-    lazy var blurEffect = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
-    lazy var blurEffectView = UIVisualEffectView(effect: blurEffect)
-    var contentView: UIView {
+    
+    private(set) public lazy var blurEffect = UIBlurEffect(style: UIBlurEffect.Style.prominent)
+    private(set) public lazy var blurEffectView = UIVisualEffectView(effect: blurEffect)
+    
+    public final var contentView: UIView {
         blurEffectView.contentView
     }
     
-    var label = UILabel()
-    var activityView = UIActivityIndicatorView(style: .large)
-    var cancelButton = UIButton()
+    public var label = UILabel()
+    public var activityView = UIActivityIndicatorView(style: .large)
+    public var cancelButton = UIButton()
     
-    lazy var stackView = UIStackView(arrangedSubviews: [
+    private(set) public lazy var stackView = UIStackView(arrangedSubviews: [
         activityView,
-//        label
+        label
     ])
     
     // ===---------------------------------------------------------------------------------------===
@@ -65,8 +67,8 @@ public class ActivityViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 20
         
-        label.text = "Some Title"
         label.textAlignment = .center
+        label.numberOfLines = 0
                 
         activityView.startAnimating()
         

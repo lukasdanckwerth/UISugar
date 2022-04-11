@@ -1,9 +1,9 @@
 //
-//  Dictionary + WinValue.swift
+//  Dictionary + Lukas Danckwerth.swift
 //  UltraExpertGoTests
 //
 //  Created by Lukas Danckwerth on 27.03.20.
-//  Copyright © 2020 WinValue. All rights reserved.
+//  Copyright © 2020 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
@@ -17,5 +17,4 @@ extension Dictionary {
         }
         return componentString.string
     }
-    
 }

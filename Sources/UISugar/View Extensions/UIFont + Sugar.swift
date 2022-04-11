@@ -1,9 +1,9 @@
 //
 //  Extension UIFont.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 29.02.20.
-//  Copyright © 2020 WinValue. All rights reserved.
+//  Copyright © 2020 Lukas Danckwerth. All rights reserved.
 //
 #if canImport(UIKit)
 import UIKit.UIFont

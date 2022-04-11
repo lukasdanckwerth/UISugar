@@ -9,7 +9,6 @@ import Foundation
 
 private class StopWatch {
     
-    
     // MARK: - Properties
     
     /// Describes the usage of this stop watch.
@@ -40,7 +39,6 @@ private class StopWatch {
     var formattedTimeIntervalSinceStart: String {
         return formatTimeIntervall(timeIntervalSinceStart)
     }
-    
     
     // MARK: - Initialization
     

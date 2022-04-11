@@ -1,14 +1,36 @@
 //
 //  ExtensionDate.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 23.02.18.
-//  Copyright © 2018 WinValue. All rights reserved.
+//  Copyright © 2018 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
 
 public extension Date {
+    
+    /// Returns a string from the given date formatted in the form of 'yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ'.
+    ///
+    /// - argument date: The date to format in a string.
+    var iso8601Format: String {
+        return DateFormatter.iso8601Full.string(from: self)
+    }
+    
+    /// Returns a string from the given date formatted in the form of 'yyyy-MM-dd'.
+    ///
+    /// - argument date: The date to format in a string.
+    var onlyDateFormat: String {
+        return DateFormatter.onlyDateFormatter.string(from: self)
+    }
+    
+    /// Returns a string from the given date formatted in the form of 'yyyy-MM'.
+    ///
+    /// - argument date: The date to format in a string.
+    var onlyYearMonth: String {
+        return DateFormatter.onlyYearMonthFormatter.string(from: self)
+    }
+    
     
     /// Returns a string from the given date formatted in the form of 'yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ'.
     ///

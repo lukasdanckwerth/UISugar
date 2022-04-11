@@ -1,9 +1,9 @@
 //
 //  ExtensionUICollectionViewCell.swift
-//  UltraExpert-Go
+//  UISugar
 //
 //  Created by Lukas on 18.09.19.
-//  Copyright © 2019 WinValue. All rights reserved.
+//  Copyright © 2019 Lukas Danckwerth. All rights reserved.
 //
 
 #if canImport(UIKit)
