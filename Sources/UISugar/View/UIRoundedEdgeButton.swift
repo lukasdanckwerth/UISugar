@@ -15,31 +15,31 @@ public class UIRoundedEdgeButton: UIButton {
     // MARK: - Properties
     
     /// The corner radius. Default is `WVDefaultCornerRadius()`.
-    var cornerRadius: CGFloat = 4 {
+    public var cornerRadius: CGFloat = 4 {
         didSet { layer.cornerRadius = cornerRadius }
     }
     
     /// Color of the layer border.
-    var borderColor: UIColor? {
+    public var borderColor: UIColor? {
         didSet { layer.borderColor = borderColor?.cgColor }
     }
     
     /// Selected color when filled.
-    var selectedColor: UIColor? = .clear
+    public var selectedColor: UIColor? = .clear
     
     /// Color of background color when filled.
-    var disabledColor: UIColor = .clear
+    public var disabledColor: UIColor = .clear
     
     /// Stores the background color when switch `isEnabled` changes the background color to disabled.
     private var enabledColor: UIColor?
     
     /// Boolean value indicating whether this button is drawn with filled background color.
-    var isFilled: Bool = false {
+    public var isFilled: Bool = false {
         didSet { layer.borderWidth = isFilled ? 0 : 1 }
     }
     
     /// A Boolean value indicating whether this button draws a border.
-    var isDrawsBorder: Bool = true
+    public var isDrawsBorder: Bool = true
     
     /// A Boolean value indicating whether this button is enabled or not.
     public override var isEnabled: Bool {
@@ -60,7 +60,7 @@ public class UIRoundedEdgeButton: UIButton {
     }
     
     /// Insets of the button. Default is `8` for left and right, and `0` for top and bottom.
-    var insets: UIEdgeInsets? = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+    public var insets: UIEdgeInsets? = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
     
     /// Overriden in order to set the insets.
     override public var intrinsicContentSize: CGSize {
