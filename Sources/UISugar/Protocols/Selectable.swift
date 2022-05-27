@@ -8,26 +8,49 @@
 
 import Foundation
 
-protocol Selectable {
+/// A protocol for anything beeing selectable.
+///
+public protocol Selectable {
     associatedtype SelectableObject
     
+    /// A Boolean value indicating whether the receiver is selected.
+    ///
     var isSelected: Bool {get set}
+    
+    /// An associated object which could be selected or not.
+    ///
     var representedObject: SelectableObject {get set}
 }
 
-class SelectableItem<T>: Selectable {
+/// A wrapper object for selectable items.
+///
+public class SelectableItem<T>: Selectable {
     
     /// The represented 'selectable' object.
     ///
-    var representedObject: T
+    public var representedObject: T
     
     /// Boolean value to indicate whether this Selectable is selected or not.
     ///
-    var isSelected: Bool = false
+    public var isSelected: Bool = false
     
     /// Constructor with single parameter.
     ///
-    init(_ representedObject: T) {
+    public init(_ representedObject: T) {
         self.representedObject = representedObject
+    }
+}
+
+/// Additional functionality for a `Selectable`.
+///
+extension Selectable {
+    
+    /// Toggles the `isSelected` Boolean value.
+    ///
+    /// - returns: The new value of `isSelected`.
+    ///
+    mutating func toggle() -> Bool {
+        isSelected = !isSelected
+        return isSelected
     }
 }

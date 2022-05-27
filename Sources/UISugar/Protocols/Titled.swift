@@ -28,5 +28,10 @@ public protocol LocalizedTitled: Titled {
 
 // default implementation
 public extension LocalizedTitled {
-    var localizedTitle: String { NSLocalizedString(title, comment: "Unknown") }
+    
+    /// Returns the localized version of the title.
+    ///
+    var localizedTitle: String {
+        return NSLocalizedString(title, comment: "Unknown")
+    }
 }
