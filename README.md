@@ -1,9 +1,3 @@
 # UISugar
 
-A description of this package.
-
-### UserDefaultsable
-
-```swift
-
-```
+> Syntatic sugar for [`UIKit`](https://developer.apple.com/documentation/uikit).
