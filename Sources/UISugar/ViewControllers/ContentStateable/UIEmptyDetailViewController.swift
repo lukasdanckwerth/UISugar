@@ -1,6 +1,6 @@
 //
 //  UIEmptyDetailViewController.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 30.09.17.
 //

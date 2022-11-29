@@ -1,6 +1,6 @@
 //
 //  WKWebViewController.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 09.08.17.
 //

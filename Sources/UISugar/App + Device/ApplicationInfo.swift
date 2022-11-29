@@ -1,6 +1,6 @@
 //
 //  ApplicationInfo.swift
-//  
+//  UISugar
 //
 //  Created by Lukas on 30.11.20.
 //

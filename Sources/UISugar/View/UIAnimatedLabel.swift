@@ -1,6 +1,6 @@
 //
 //  UIAnimatedLabel.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 10.10.17.
 //

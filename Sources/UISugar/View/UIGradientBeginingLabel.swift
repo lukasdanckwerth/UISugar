@@ -1,6 +1,6 @@
 //
 //  UIGradientBeginingLabel.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 05.12.17.
 //

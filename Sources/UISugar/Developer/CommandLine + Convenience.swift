@@ -1,8 +1,8 @@
 //
 //  CommandLine + Convenience.swift
-//  
+//  UISugar
 //
-//  Created by Lukas on 10.08.21.
+//  Created by Lukas Danckwerth on 10.08.21.
 //
 
 import Foundation

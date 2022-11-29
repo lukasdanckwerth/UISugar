@@ -1,6 +1,6 @@
 //
 //  UIActivityIndicatorStackView.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 12.12.17.
 //

@@ -1,6 +1,6 @@
 //
 //  GradientView.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 05.10.17.
 //

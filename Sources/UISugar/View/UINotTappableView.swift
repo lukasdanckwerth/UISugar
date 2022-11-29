@@ -1,6 +1,6 @@
 //
 //  UINotTappableView.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 26.03.18.
 //  Copyright © 2018 Lukas Danckwerth. All rights reserved.

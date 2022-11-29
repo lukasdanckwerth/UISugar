@@ -13,17 +13,17 @@ import PDFKit
 // MARK: - PDFViewController
 
 @available(iOS 11.0, *)
-class PDFViewController: UIViewController {
+public class PDFViewController: UIViewController {
     
     
     // MARK: - Properties
     
     /// The underlying PDF view.
-    lazy var pdfView = PDFView()
+    public lazy var pdfView = PDFView()
     
     
     /// Button item to present an `UIActivityViewController` to share the presented assignment.
-    lazy var shareButtonItem = UIBarButtonItem(
+    public lazy var shareButtonItem = UIBarButtonItem(
         barButtonSystemItem: .action,
         target: self,
         action: #selector(shareAction(sender:))
@@ -33,18 +33,18 @@ class PDFViewController: UIViewController {
     // MARK: - Auxiliary properties
     
     /// Returns the `URL` of the presented PDF document or `nil`.
-    var documentURL: URL? {
+    public var documentURL: URL? {
         return pdfView.document?.documentURL
     }
     
     /// Returns a Boolean value indicating wheather the presented document is available locally.
-    var documentExists: Bool {
+    public var documentExists: Bool {
         guard let documentURL = self.documentURL else { return false }
         return FileManager.default.fileExists(atPath: documentURL.path)
     }
     
     /// Returns the file name of the presented PDF document or `nil`.
-    var documentName: String? {
+    public var documentName: String? {
         return documentURL?.deletingPathExtension().lastPathComponent
     }
     
@@ -52,7 +52,7 @@ class PDFViewController: UIViewController {
     // MARK: - Initialization
     
     /// Default initialization.
-    init(documentURL: URL?) {
+    public init(documentURL: URL?) {
         super.init(nibName: nil, bundle: nil)
         
         if let documentURL = documentURL {
@@ -60,7 +60,12 @@ class PDFViewController: UIViewController {
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public init(document: PDFDocument) {
+        super.init(nibName: nil, bundle: nil)
+        pdfView.document = document
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -69,7 +74,7 @@ class PDFViewController: UIViewController {
     // MARK: - Override UIViewController
     
     /// Loads the PDF view.
-    override func loadView() {
+    public override func loadView() {
         view = UIView()
         
         view.backgroundColor = .groupTableViewBackground
@@ -82,7 +87,7 @@ class PDFViewController: UIViewController {
         pdfView.alpha = 0
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         // items only enabled if the pdf view controller contains a valid pdf
@@ -94,7 +99,7 @@ class PDFViewController: UIViewController {
         navigationItem.leftBarButtonItems = [shareButtonItem]
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         pdfView.layoutDocumentView()

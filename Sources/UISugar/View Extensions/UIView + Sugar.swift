@@ -54,16 +54,15 @@ public extension UIView {
         
         UIGraphicsBeginImageContext(layer.frame.size)
         
-        defer {
-            UIGraphicsEndImageContext()
-        }
-        
+        var image: UIImage?
         if let context = UIGraphicsGetCurrentContext() {
             layer.render(in: context)
-            return UIGraphicsGetImageFromCurrentImageContext()
-        } else {
-            return nil
+            image =  UIGraphicsGetImageFromCurrentImageContext()
         }
+        
+        UIGraphicsEndImageContext()
+        
+        return image
     }
 }
 #endif

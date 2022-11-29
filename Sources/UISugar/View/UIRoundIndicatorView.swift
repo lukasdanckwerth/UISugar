@@ -1,6 +1,6 @@
 //
 //  UIRoundIndicatorView.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 07.12.17.
 //

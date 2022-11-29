@@ -1,49 +1,32 @@
 //
 //  Localization.swift
-//  Times Your Age
+//  UISugar
 //
-//  Created by Lukas on 07.08.21.
+//  Created by Lukas Danckwerth on 07.08.21.
 //
 
 import Foundation
 
-public func translate(_ text: String) -> String {
-    NSLocalizedString(text, comment: "")
+/// Localizes the specified string using `NSLocalizedString()`.
+///
+public func translate(_ text: String, comment: String = "") -> String {
+    NSLocalizedString(text, comment: comment)
 }
 
+/// Localizes the specified string using `NSLocalizedString()`.
+///
 public func translate(_ text: String, args: CVarArg...) -> String {
     String(format: NSLocalizedString(text, comment: ""), arguments: args)
 }
 
-// ===-------------------------------------------------------------------------------------------------------------===
-//
-// MARK: - Translation
-// ===-------------------------------------------------------------------------------------------------------------===
-
-/// Translates the given text to the device's language.
-//public func translate(_ text: String, _ arguments: CVarArg...) -> String? {
-//    if arguments.isEmpty {
-//        return NSLocalizedString(text, comment: "")
-//    } else {
-//        let localized = NSLocalizedString(text, comment: "")
-//        return String(format: localized, arguments: arguments)
-//    }
-//}
-
-let tr = translate
-
-
-
-/// Translates the given text to the device's language.
+/// Localizes the specified string using `NSLocalizedString()`.
 ///
-public func localize(_ text: String, _ arguments: CVarArg...) -> String? {
-    if arguments.isEmpty {
-        return NSLocalizedString(text, comment: "")
-    } else {
-        return String(format: NSLocalizedString(text, comment: ""), arguments: arguments)
-    }
+public func l(_ text: String, comment: String = "") -> String {
+    NSLocalizedString(text, comment: comment)
 }
 
-func NSLocalizedString(_ text: String) -> String {
-    return NSLocalizedString(text, comment: "")
+/// Localizes the specified string using `NSLocalizedString()`.
+///
+public func l(_ text: String, args: CVarArg...) -> String {
+    String(format: NSLocalizedString(text, comment: ""), arguments: args)
 }

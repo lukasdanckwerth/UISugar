@@ -1,6 +1,6 @@
 //
 //  StopWatch.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 15.11.17.
 //

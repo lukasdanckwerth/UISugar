@@ -1,6 +1,6 @@
 //
 //  ExtensionUICollectionViewController.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 07.05.18.
 //  Copyright © 2018 Lukas Danckwerth. All rights reserved.

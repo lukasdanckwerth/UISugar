@@ -1,6 +1,6 @@
 //
 //  ExtensionUIImage.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 02.11.17.
 //

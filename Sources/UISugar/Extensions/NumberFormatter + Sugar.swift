@@ -79,8 +79,8 @@ extension NumberFormatter {
     /// - parameter emptyValue:  A `String` to return if given value `currency` is `nil`.
     ///
     /// - returns:  A `String` in the form of `123,00 €` or `99,95 €`.
-    public static func format(currency: Double?, emptyValue: String = EMPTY_STRING) -> String! {
-        return currency != nil ? fractionCurrency.string(from: NSNumber(value: currency!)) : EMPTY_STRING
+    public static func format(currency: Double?, emptyValue: String = "") -> String! {
+        return currency != nil ? fractionCurrency.string(from: NSNumber(value: currency!)) : emptyValue
     }
     
     /// Returns the formatted version of the given `Int` value.
@@ -90,16 +90,16 @@ extension NumberFormatter {
     
     /// Returns the formatted version of the given `Double` value.
     public static func formatInteger(_ value: Double?) -> String! {
-        return value != nil ? integer.string(from: NSNumber(value: value!)) : EMPTY_STRING
+        return value != nil ? integer.string(from: NSNumber(value: value!)) : ""
     }
     
     /// Returns the formatted decimal version of the given `Int` value.
     public static func format(_ value: Int?) -> String! {
-        return value != nil ? decimal.string(from: NSNumber(value: value!)) : EMPTY_STRING
+        return value != nil ? decimal.string(from: NSNumber(value: value!)) : ""
     }
     
     /// Returns the formatted decimal version of the given `Double` value.
     public static func format(_ value: Double?) -> String! {
-        return value != nil ? decimal.string(from: NSNumber(value: value!)) : EMPTY_STRING
+        return value != nil ? decimal.string(from: NSNumber(value: value!)) : ""
     }
 }

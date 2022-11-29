@@ -1,6 +1,6 @@
 //
 //  Selectable.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 03.01.19.
 //  Copyright © 2019 Lukas Danckwerth. All rights reserved.

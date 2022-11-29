@@ -1,6 +1,6 @@
 //
 //  UIErrorViewController.swift
-//  RestwertBoerse
+//  UISugar
 //
 //  Created by Lukas Danckwerth on 14.03.18.
 //  Copyright © 2018 Lukas Danckwerth. All rights reserved.
